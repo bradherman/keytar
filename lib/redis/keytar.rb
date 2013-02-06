@@ -53,6 +53,8 @@ class Redis
 			@redis.smembers(@namespace+':keys').each do |key|
 				@redis.del key
 			end
+
+			@redis.srem @namespace+':keys', @redis.smembers(@namespace+':keys')
 		end
 
 		private
