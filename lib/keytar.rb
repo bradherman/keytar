@@ -1,2 +1,2 @@
-require "keytar/version"
-require "redis/keytar"
+require 'redis/version'
+require 'redis/keytar'
